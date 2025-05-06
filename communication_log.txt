@@ -1,0 +1,122 @@
+--- Planning Agent Sent Request ---
+{
+  "jsonrpc": "2.0",
+  "id": "2ec88ab4-455f-4858-b3e0-09f7298a8901",
+  "method": "tasks/send",
+  "params": {
+    "id": "1fa07315-31f9-44c3-8363-f19f18c3f8fa",
+    "message": {
+      "role": "user",
+      "parts": [
+        {
+          "type": "text",
+          "text": "Tell me a short, funny story about a robot chef."
+        }
+      ]
+    }
+  }
+}
+-------------------------------------
+--- Execution Agent Received Request ---
+{
+  "jsonrpc": "2.0",
+  "id": "2ec88ab4-455f-4858-b3e0-09f7298a8901",
+  "method": "tasks/send",
+  "params": {
+    "id": "1fa07315-31f9-44c3-8363-f19f18c3f8fa",
+    "message": {
+      "role": "user",
+      "parts": [
+        {
+          "type": "text",
+          "text": "Tell me a short, funny story about a robot chef."
+        }
+      ]
+    }
+  }
+}
+----------------------------------------
+--- Execution Agent Sent Response ---
+{
+  "jsonrpc": "2.0",
+  "id": "2ec88ab4-455f-4858-b3e0-09f7298a8901",
+  "result": {
+    "id": "1fa07315-31f9-44c3-8363-f19f18c3f8fa",
+    "status": {
+      "state": "completed",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "A robot chef, named Rusty, was programmed to make only the finest souffl\u00e9s.  Unfortunately, his definition of \"fine\" included adding copious amounts of glitter and miniature rubber ducks.  His souffl\u00e9s were visually stunning, but tasted suspiciously of plastic and disappointment.  His only customer was a very confused golden retriever.\n"
+          }
+        ]
+      },
+      "timestamp": "2025-05-06T18:39:48.039754"
+    },
+    "history": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Tell me a short, funny story about a robot chef."
+          }
+        ]
+      },
+      {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "A robot chef, named Rusty, was programmed to make only the finest souffl\u00e9s.  Unfortunately, his definition of \"fine\" included adding copious amounts of glitter and miniature rubber ducks.  His souffl\u00e9s were visually stunning, but tasted suspiciously of plastic and disappointment.  His only customer was a very confused golden retriever.\n"
+          }
+        ]
+      }
+    ]
+  }
+}
+---------------------------------------
+--- Planning Agent Received Response ---
+{
+  "id": "2ec88ab4-455f-4858-b3e0-09f7298a8901",
+  "jsonrpc": "2.0",
+  "result": {
+    "history": [
+      {
+        "parts": [
+          {
+            "text": "Tell me a short, funny story about a robot chef.",
+            "type": "text"
+          }
+        ],
+        "role": "user"
+      },
+      {
+        "parts": [
+          {
+            "text": "A robot chef, named Rusty, was programmed to make only the finest souffl\u00e9s.  Unfortunately, his definition of \"fine\" included adding copious amounts of glitter and miniature rubber ducks.  His souffl\u00e9s were visually stunning, but tasted suspiciously of plastic and disappointment.  His only customer was a very confused golden retriever.\n",
+            "type": "text"
+          }
+        ],
+        "role": "agent"
+      }
+    ],
+    "id": "1fa07315-31f9-44c3-8363-f19f18c3f8fa",
+    "status": {
+      "message": {
+        "parts": [
+          {
+            "text": "A robot chef, named Rusty, was programmed to make only the finest souffl\u00e9s.  Unfortunately, his definition of \"fine\" included adding copious amounts of glitter and miniature rubber ducks.  His souffl\u00e9s were visually stunning, but tasted suspiciously of plastic and disappointment.  His only customer was a very confused golden retriever.\n",
+            "type": "text"
+          }
+        ],
+        "role": "agent"
+      },
+      "state": "completed",
+      "timestamp": "2025-05-06T18:39:48.039754"
+    }
+  }
+}
+----------------------------------------
